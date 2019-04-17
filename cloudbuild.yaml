@@ -8,8 +8,8 @@ steps:
     args: [
       'beta', 'run', 'deploy',
       'quarkus-vertx',
-      '--image gcr.io/$PROJECT_ID/quarkus-vertx',
-      '--region us-central1',
+      '--image', 'gcr.io/$PROJECT_ID/quarkus-vertx',
+      '--region', 'us-central1',
       '--allow-unauthenticated'
     ]
 
