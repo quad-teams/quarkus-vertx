@@ -6,11 +6,11 @@ steps:
   # Start up a cloud instance
   - name: 'gcr.io/cloud-builders/gcloud'
     args: [
-      'beta', 'run', 'deploy',
+      'beta run deploy',
+      '--image gcr.io/$PROJECT_ID/quarkus-vertx',
+      '--region us-central1',
+      '--allow-unauthenticated',
       'quarkus-vertx',
-      '--image', 'gcr.io/$PROJECT_ID/quarkus-vertx',
-      '--region', 'us-central1',
-      '--allow-unauthenticated'
     ]
 
 # Image name
