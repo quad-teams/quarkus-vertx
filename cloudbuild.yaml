@@ -1,7 +1,11 @@
 steps:
   # Create docker image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '--tag=gcr.io/$PROJECT_ID/quarkus-vertx', '.']
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/quarkus-vertx', '.']
+
+  # Push the container image to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/quarkus-vertx']
 
   # Start up a cloud instance
   - name: 'gcr.io/cloud-builders/gcloud'
