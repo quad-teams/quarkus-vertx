@@ -14,4 +14,4 @@ steps:
     ]
 
 # Image name
-images: ['gcr.io/$PROJECT_ID/quarkus-vertx']
+images: ['gcr.io/$PROJECT_ID/quarkus-vertx:latest']
