@@ -8,10 +8,10 @@ steps:
     args: [
       'beta', 'run', 'deploy',
       'quarkus-vertx',
-      '--image', 'gcr.io/$PROJECT_ID/quarkus-vertx',
+      '--image', 'gcr.io/$PROJECT_ID/quarkus-vertx:latest',
       '--region', 'us-central1',
       '--allow-unauthenticated'
     ]
 
 # Image name
-images: ['gcr.io/$PROJECT_ID/quarkus-vertx:latest']
+images: ['gcr.io/$PROJECT_ID/quarkus-vertx']
